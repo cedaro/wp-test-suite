@@ -1,0 +1,33 @@
+{
+  "name": "cedaro/wp-test-suite",
+  "description": "A library for loading the WordPress test suite.",
+  "license": "MIT",
+  "homepage": "https://github.com/cedaro/wp-test-suite",
+  "authors": [
+    {
+      "name": "Brady Vercher",
+      "email": "brady@blazersix.com",
+      "homepage": "https://www.cedaro.com/"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/cedaro/wp-test-suite/issues",
+    "source": "https://github.com/cedaro/wp-test-suite"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "require": {
+    "php": ">=7.0",
+    "phpunit/phpunit": ">=6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cedaro\\WP\\Tests\\": "src/"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  }
+}
