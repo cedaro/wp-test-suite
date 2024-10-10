@@ -58,7 +58,9 @@ function get_phpunit_options() {
 	$value        = $property->getValue( new Command() );
 	$long_options = array_keys( $value );
 
-	return Getopt::getopt(
+	$method = method_exists( Getopt::class, 'parse' ) ? 'parse' : 'getopt';
+
+	return Getopt::$method(
 		$GLOBALS['argv'],
 		'd:c:hv',
 		$long_options
